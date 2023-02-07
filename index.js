@@ -84,6 +84,37 @@ function findingBadData(arr) {
   
 }
 
+// //problem -5
+
+//-------------
+    // this function will receive 3 parameter and will calculate based on conditions
+    //-------------
+
+function gemsToDiamond(gems1, gems2, gems3) { 
+    
+    if (typeof gems1 === 'string' || typeof gems2 === 'string' || typeof gems3 === 'string') {
+        return ('Error: Input should be a number, not a string.')
+      
+    } else {
+        const gems1Power = gems1 * 21 // multiplying with given parameter 
+        const gems2Power = gems2 * 32
+        const gems3Power = gems3 * 43
+
+        const totlaDiamond = gems1Power + gems2Power + gems3Power // total of gems 
+
+        if (totlaDiamond > 2000) { // checking if totalDiamond > 2000
+            let substract = totlaDiamond - 2000
+            return substract
+        } else if (totlaDiamond < 2000) { //checking if totalDiamond < 2000
+            return totlaDiamond
+        }
+    }
+
+
+}
+
+
+
 
 
 
