@@ -49,7 +49,6 @@ function evenOdd(inputStr) {
 
 
 
-
 //problem -3
 
  //-------------
@@ -79,7 +78,7 @@ function isLGSeven(number) {
     // this function will receive a parameter as array and will findout the bad data (negative value) from array
     //-------------
 function findingBadData(arr) { 
-    if (Array.isArray(arr) && typeof number === 'string') { 
+    if (Array.isArray(arr) && typeof arr !== 'string') { 
       let badData = 0
       let goodData = 0
       
