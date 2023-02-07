@@ -24,6 +24,11 @@ function mindGame(number) {
     }  
 }
 
+
+
+
+
+
 //problem -2
 
   //-------------
@@ -46,6 +51,11 @@ function evenOdd(inputStr) {
 
 }
 
+
+
+
+
+
 //problem -3
 
 function isLGSeven(number) { // this function will take a parameter and calculte the blew conditins
@@ -65,10 +75,7 @@ function isLGSeven(number) { // this function will take a parameter and calculte
     // this function will receive a parameter as array and will findout the bad data (negative value) from array
     //-------------
 function findingBadData(arr) { 
-  if (typeof arr === 'string') {
-       return ('Error: Input should be a number, not a string.')  
-      
-  } else {
+    if (Array.isArray(arr) ) { 
       let badData = 0
       let goodData = 0
       
@@ -80,9 +87,19 @@ function findingBadData(arr) {
         }   
     }
     return badData
+      
+      
+  } else {
+     return ('Error: Input should be an array.')  
     }
   
 }
+
+const num = '[1,-2]'
+let result = findingBadData(num)
+console.log(result)
+
+
 
 // //problem -5
 
