@@ -26,21 +26,38 @@
 
 //problem -2
 
-function evenOdd(inputStr) { 
+// function evenOdd(inputStr) { 
 
-    if (typeof inputStr === 'number') {
-       return ('Error: Input should be a string, not a number.')  
+//     if (typeof inputStr === 'number') {
+//        return ('Error: Input should be a string, not a number.')  
       
-    } else {
-    let length = inputStr.length  // this line will get the total index of string
-    if (length % 2 == 0) {       // this condition will check if this value is even 
-        return ('Even')
-    } else { 
-        return ('Odd')
-    }
-    }
+//     } else {
+//     let length = inputStr.length  // this line will get the total index of string
+//     if (length % 2 == 0) {       // this condition will check if this value is even 
+//         return ('Even')
+//     } else { 
+//         return ('Odd')
+//     }
+//     }
 
+// }
+
+//problem -3
+
+function isLGSeven(number) { // this function will take a parameter and calculte the blew conditins
+
+    let differece = number - 7 // it will give the substract from number 
+    if (differece < 7) { // it will compare between input number and 7
+        return differece
+    } else if(differece > 7 ) { 
+        return number * 2 // it'll return double value of input 
+    }
+    
 }
+
+
+
+
 
 
 
