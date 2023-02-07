@@ -25,12 +25,10 @@ function mindGame(number) {
 }
 
 
-
-
 //problem -2
 
   //-------------
-    // this function will receive a parameter and will get a string and will find the even or odd based on input charecters
+    // this function will receive a parameter and get a string  find the even or odd based on input charecters
     //-------------
 
 function evenOdd(inputStr) { 
@@ -54,7 +52,11 @@ function evenOdd(inputStr) {
 
 //problem -3
 
-function isLGSeven(number) { // this function will take a parameter and calculte the blew conditins
+ //-------------
+    // this function will take a number as parameter and calculte the blew conditins
+    //-------------
+
+function isLGSeven(number) { 
     if (typeof number === 'string') {
         return ('Error: Input should be a number, not a string.')
       
