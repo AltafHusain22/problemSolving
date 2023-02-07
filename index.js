@@ -27,8 +27,6 @@ function mindGame(number) {
 
 
 
-
-
 //problem -2
 
   //-------------
@@ -43,9 +41,9 @@ function evenOdd(inputStr) {
     } else {
     let length = inputStr.length  // this line will get the total index of string
     if (length % 2 == 0) {       // this condition will check if this value is even 
-        return ('Even')
+        return ('even')
     } else { 
-        return ('Odd')
+        return ('odd')
     }
     }
 
@@ -54,11 +52,13 @@ function evenOdd(inputStr) {
 
 
 
-
-
 //problem -3
 
 function isLGSeven(number) { // this function will take a parameter and calculte the blew conditins
+    if (typeof number === 'string') {
+        return ('Error: Input should be a number, not a string.')
+      
+    } else { 
 
     let differece = number - 7 // it will give the substract from number 
     if (differece < 7) { // it will compare between input number and 7
@@ -67,6 +67,8 @@ function isLGSeven(number) { // this function will take a parameter and calculte
         return number * 2 // it'll return double value of input 
     }
     
+    }
+  
 }
 
 //problem -4
@@ -75,7 +77,7 @@ function isLGSeven(number) { // this function will take a parameter and calculte
     // this function will receive a parameter as array and will findout the bad data (negative value) from array
     //-------------
 function findingBadData(arr) { 
-    if (Array.isArray(arr) ) { 
+    if (Array.isArray(arr) && typeof number === 'string') { 
       let badData = 0
       let goodData = 0
       
@@ -95,9 +97,6 @@ function findingBadData(arr) {
   
 }
 
-const num = '[1,-2]'
-let result = findingBadData(num)
-console.log(result)
 
 
 
@@ -108,25 +107,28 @@ console.log(result)
     //-------------
 
 function gemsToDiamond(gems1, gems2, gems3) { 
-    
-    if (typeof gems1 === 'string' || typeof gems2 === 'string' || typeof gems3 === 'string') {
-        return ('Error: Input should be a number, not a string.')
+
+         if (arguments.length === 3) {
+        if (typeof gems1 === 'string' || typeof gems2 === 'string' || typeof gems3 === 'string') {
+            return ('Error: Input should be a number, not a string.')
       
-    } else {
-        const gems1Power = gems1 * 21 // multiplying with given parameter 
-        const gems2Power = gems2 * 32
-        const gems3Power = gems3 * 43
+        } else {
+            const gems1Power = gems1 * 21 // multiplying with given parameter 
+            const gems2Power = gems2 * 32
+            const gems3Power = gems3 * 43
 
-        const totlaDiamond = gems1Power + gems2Power + gems3Power // total of gems 
+            const totlaDiamond = gems1Power + gems2Power + gems3Power // total of gems 
 
-        if (totlaDiamond > 2000) { // checking if totalDiamond > 2000
-            let substract = totlaDiamond - 2000
-            return substract
-        } else if (totlaDiamond < 2000) { //checking if totalDiamond < 2000
-            return totlaDiamond
+            if (totlaDiamond > 2000) { // checking if totalDiamond > 2000
+                let substract = totlaDiamond - 2000
+                return substract
+            } else if (totlaDiamond < 2000) { //checking if totalDiamond < 2000
+                return totlaDiamond
+            }
         }
+    } else { 
+        return("The function was not called with three parameters.");
     }
-
 
 }
 
